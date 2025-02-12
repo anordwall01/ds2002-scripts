@@ -17,4 +17,4 @@ echo "removing blanks and renaming file"
 # tr can remove spaces
 /usr/bin/cat "$LOCAL_CSV" | tr -s '\n' > "$NAME" ||exit 1
 
-echo "done! clean filed named $NAME"
+echo "done! clean file named $NAME"
