@@ -1,30 +1,31 @@
 #!/usr/bin/python3
 
 import pandas as pd
+import sys
 
-CSV=$1
+CSV = sys.argv[1]
 
-echo "creating data frame"
+print("creating data frame")
 
-df = pd.read_csv('$CSV')
+df = pd.read_csv(CSV)
 
-echo "data frame created"
+print("data frame created")
 
-echo "there are this many rows in the df:"
+print("there are this many rows in the df:")
 
 print(df.to_string())
 
-echo "dropping NA rows"
+print("dropping NA rows")
 
 df.dropna(inplace = True)
 
 
-echo "now there are this many rows in the df:"
+print("now there are this many rows in the df:")
 
 print(df.to_string())
 
-echo "saving cleaned data frame"
+print("saving cleaned data frame")
 
 df.to_csv('cleaned_data.csv')
 
-echo "clean file named cleaned_data.csv"
+print("clean file named cleaned_data.csv")
